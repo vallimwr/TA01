@@ -1,17 +1,10 @@
-from multiprocessing import pool
-from unittest.util import three_way_cmp
+import requests
 
+def forex(USD):
+    api_key = "1JZVGRKCHDT3KUSQ"
+    url = "https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey={api_key}"
 
-print("hi")
+    r = requests.get(url)
 
-print("test")
-
-
-print("test2")
-<<<<<<< HEAD
-poo
-POOOPPPPP
-=======
-
-print("hi")
->>>>>>> 2eaf3e21d719f67b31b7a0ec7e83ebf1f2da447b
+    data = r.json()
+    print(data)
