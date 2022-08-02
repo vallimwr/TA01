@@ -12,4 +12,4 @@ with file_path.open(mode= 'r', encoding= 'UTF-8') as file:
     print (header)
     for line in reader:
         full_list.append(line)
-        
+        # ???
