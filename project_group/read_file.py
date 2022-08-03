@@ -11,16 +11,26 @@ def overheads():
         
 print(overheads())
 
-# blank_list = []
+def cash_on_hand():
+    blank_list = []
+    path = Path.cwd()/'project_group'/'csv_reports'/'cash-on-hand-usd.csv'
+    with path.open(mode = "r",encoding="UTF-8",newline="") as file:
+        reader = csv.reader(file)
+        next(reader)
+        for line in reader:
+            blank_list.append(line)
+            print(line)
 
-# def cash_on_hand():
-#      path = Path.cwd()/'project_group'/'csv_reports'/'cash-on-hand-usd.csv'
-#      with path.open(mode = "r",encoding="UTF-8",newline="") as file:
-#         reader = csv.reader(file)
-#         next(reader)
+print(cash_on_hand())
 
-#         for line in reader:
-#             for value in line:
-#                 blank_list.append(float(value))
+def profit_and_loss():
+    pnl_list = []
+    path = Path.cwd()/'project_group'/'csv_reports'/'profit-and-loss-usd.csv'
+    with path.open(mode = "r",encoding="UTF-8",newline="") as file:
+        reader = csv.reader(file)
+        next(reader)
+        for line in reader:
+            pnl_list.append(line)
+            print(line)
 
-#             print(blank_list)
+print(profit_and_loss())
