@@ -11,7 +11,7 @@ def overheads():
         next(reader)
 
         for line in reader:
-            overhead_value.append(line)
+            overhead_value.append(float(line[1]))
             overhead_list.append(line)
             maximum_value = max(overhead_value)
             return f"{maximum_value}"
