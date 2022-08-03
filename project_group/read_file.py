@@ -1,10 +1,10 @@
+
 from pathlib import Path
 import re, csv
 
-overhead_value = []
-overhead_list = []
-
 def overheads():
+    overhead_value = []
+    overhead_list = []
     path = Path.cwd()/'project_group'/'csv_reports'/'Overheads.csv'
     with path.open(mode= "r", encoding= "UTF-8") as file:
                 reader= csv.reader(file)
@@ -14,7 +14,6 @@ def overheads():
                     print(line)
 
 
-                      
 print(overheads())
 
 blank_list = []
