@@ -1,6 +1,7 @@
 from pathlib import Path
 import re, csv
 
+overhead_value = []
 overhead_list = []
 
 def overheads():
@@ -8,8 +9,11 @@ def overheads():
     with path.open(mode= "r", encoding= "UTF-8") as file:
         reader= csv.reader(file)
         next(reader)
+
         for line in reader:
-            overhead_list.append([line])
-
-
-print(overhead_list)
+            overhead_value.append(line)
+            overhead_list.append(line)
+            maximum_value = max(overhead_value)
+            return f"{maximum_value}"
+    
+print(overheads())
