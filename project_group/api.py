@@ -1,4 +1,4 @@
-# import requests
+import requests
 
 def forex(USD):
     api_key = "1JZVGRKCHDT3KUSQ"
