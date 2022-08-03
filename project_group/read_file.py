@@ -1,20 +1,19 @@
+from api import forex
 from pathlib import Path
 import re, csv
 
-overhead_value = []
-overhead_list = []
-
 def overheads():
+    overhead_value = []
+    overhead_list = []
     path = Path.cwd()/'project_group'/'csv_reports'/'Overheads.csv'
     with path.open(mode= "r", encoding= "UTF-8") as file:
         reader= csv.reader(file)
         next(reader)
 
-        for line in reader:
-            overhead_value.append(float(line[1]))
-            maximum_value = max(overhead_value)
-            overhead_list.append(line)
-            return f"{maximum_value}"
+        for value in reader:
+            overhead_value.append(float(value[1]))
+            overhead_list.append(value)
+            return f"{max(overhead_value)}"
     
 print(overheads())
 
