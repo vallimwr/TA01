@@ -57,8 +57,10 @@ def pnl_write(forex):
         if diff >0:
             with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[PROFIT DEFICIT] DAY: {day_pnl[amount+1]}, AMOUNT: SGD{diff:.2f}\n")
+# write cash deficit with corresponding day and difference in overall_report.txt
                 count += 1
 
     if count == 0:
         with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[PROFIT SURPLUS] Profit on each period is higher than the previous period\n")
+# write cash surplus in overall_report.txt

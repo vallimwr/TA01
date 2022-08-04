@@ -59,9 +59,10 @@ def cashonhand_write(forex):
 
             with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[CASH DEFICIT] DAY: {day_list[amount+1]}, AMOUNT: SGD{diff:.2f}\n")
-
+# write cash deficit with corresponding day and difference in overall_report.txt
                 count += 1
 
     if count == 0:
         with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[CASH SURPLUS] Cash-on-hand on each period is higher than the previous period\n")
+# write cash surplus in overall_report.txt
