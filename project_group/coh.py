@@ -15,10 +15,6 @@ def cash_on_hand():
 
 print(cash_on_hand())
 
-import coh
-
 def cashonhand_write():
-    list = []
-    day = []
-    for value in list:
-        list.append(float(value[1])*forex)
+    all_cos = []
+    for value in 

@@ -26,7 +26,6 @@ try:
         all_overheads= []
         for value in overheads():
             all_overheads.append(float(value[1]))
-        print(all_overheads)
 
         highest_amt= max(all_overheads)
         
