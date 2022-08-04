@@ -17,20 +17,19 @@ def profit_and_loss():
 
 def pnl_write(): 
     all_pnl= []
-    pnl_days= []
     for value in profit_and_loss():
         all_pnl.append(float(value[4]))
     print(all_pnl)
 
-    for days in profit_and_loss():
-        pnl_days.append(days[0])
-    print(pnl_days)
+    # for value in enumerate(all_pnl):
+    #      if value== deficit_amt:
+    #         day= profit_and_loss()[value][0]
 
-    if all_pnl[0]> all_pnl[1]:
-        deficit_amount= all_pnl[0]- all_pnl[1]
-    print(deficit_amount)
+
+    # if all_pnl[0]> all_pnl[1]:
+    #     deficit_amount= all_pnl[0]- all_pnl[1]
+    # print(deficit_amount)
         
-
     # for larger_fig in all_pnl[4]:
     #     if larger_fig:
     #         print(larger_fig)
