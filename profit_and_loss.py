@@ -14,8 +14,9 @@ def profit_and_loss():
 
 #print(profit_and_loss())
 
-def profit_and_loss_write():
+def profit_and_loss_write(): 
     
+
 
 
 
