@@ -20,6 +20,4 @@ def api():
 
         else:
             print('does not exist')
-        return forex
-
-print(api())
+    return forex
