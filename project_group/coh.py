@@ -1,4 +1,4 @@
-from api import forex
+#from api import forex
 from pathlib import Path
 import re, csv
 
@@ -16,5 +16,31 @@ def cash_on_hand():
 print(cash_on_hand())
 
 def cashonhand_write():
-    all_cos = []
-    for value in 
+    all_coh = []
+    day_list = []
+    for value in cash_on_hand():
+        all_coh.append(float(value[1]))
+    print(all_coh)
+
+    for days in cash_on_hand():
+        day_list.append(days[0])
+    print(day_list)
+#cashonhand_write()
+
+    count = 0 
+    for amount in range(len(all_coh)-1):
+        diff = all_coh[amount] - all_coh[amount + 1]
+        if diff >0:
+                text = .write(f"[CASH DEFICIT] DAY: {day_list[amount+1]}, AMOUNT: SGD{diff:.2f}")
+                count += 1
+
+        else:
+            print('does not exist')
+
+    if count == 0:
+                text = file.write(f"[CASH SURPLUS] Cash-on-hand on each period is higher than the previous period")
+
+    else:
+        print('does not exist')
+
+cashonhand_write()
