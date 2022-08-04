@@ -18,9 +18,4 @@ def overheads_write():
 
 print(overheads_write())
 
-def cashonhand_write():
-    coh_list = []
-    for value in list:
-        coh_list.append(value[1])
-
     
