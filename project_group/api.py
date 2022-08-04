@@ -9,7 +9,7 @@ data = r.json()
 
 print(data)
 
-file_path = Path.cwd()/'project group'/'overall_report.txt'
+file_path = Path.cwd()/'project_group'/'overall_report.txt'
 file_path.touch()
 
 def api():
