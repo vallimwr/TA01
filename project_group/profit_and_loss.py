@@ -63,4 +63,4 @@ def pnl_write():
         with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[PROFIT SURPLUS] Profit on each period is higher than the previous period\n")
 
-pnl_write()
+pnl_write() 
