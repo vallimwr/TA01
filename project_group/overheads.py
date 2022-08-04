@@ -23,7 +23,6 @@ try:
             for line in reader:
                 overheads_list.append(line)
             return overheads_list
-    print("This is working")
 except Exception as e:
     # errorhandling to to test that code works
     print(f"This does not work. Reason: {e}")
@@ -52,10 +51,7 @@ try:
                 category= overheads()[number][0]
                 with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                     text = file.write(f"[HIGHEST OVERHEADS] {category}: {highest_amt}\n")
-            
-    print("This is working")
+
 except Exception as e:
     #errorhandling to test if the code works
         print(f"This does not work. Reason: {e}")
-
-print(overheads_write())
