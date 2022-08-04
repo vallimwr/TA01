@@ -39,8 +39,6 @@ try:
             if values== highest_amt:
                 category= overheads()[number][0]
         return f"[HIGHEST OVERHEADS] {category}: {highest_amt}"
-        with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
-            text = file.write(f"[HIGHEST OVERHEADS] {category}: {highest_amt}")
             
     print("This is working")
 except Exception as e:
