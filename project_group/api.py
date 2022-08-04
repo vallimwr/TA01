@@ -6,8 +6,10 @@ url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_cu
 
 r = requests.get(url)
 data = r.json()
+
 print(data)
-file_path = Path.cwd()/'project group'/'overall_report.txt'
+
+file_path = Path.cwd()/'project group'/'deficit_report.txt'
 file_path.touch
 
 def api():

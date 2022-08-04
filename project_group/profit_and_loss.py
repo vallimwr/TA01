@@ -11,12 +11,15 @@ def profit_and_loss():
         for line in reader:
             pnl_list.append(line)
         return pnl_list
-
-#print(profit_and_loss())
+        
+profit_and_loss()
 
 def profit_and_loss_write(): 
     all_pnl= []
-    for data in profit_and_loss():
+    A= profit_and_loss()
+    for data in A:
         all_pnl.append(data)
 
     print(data)
+
+profit_and_loss_write()
