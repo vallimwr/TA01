@@ -22,4 +22,4 @@ def api():
             print('does not exist')
         return forex
 
-print(api())
+print(api()) 
