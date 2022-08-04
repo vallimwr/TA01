@@ -12,22 +12,20 @@ def profit_and_loss():
         for line in reader:
             pnl_list.append(line)
         return pnl_list
-        
-print(profit_and_loss())
-import profit_and_loss
+
+#profit_and_loss()       
+#print(profit_and_loss())
 
 def pnl_write(): 
     all_pnl= []
     #A= profit_and_loss()
     for value in profit_and_loss():
-        all_pnl.append(value)
+        all_pnl.append(value[4])
     print(all_pnl)
 
     
     # for larger_fig in all_pnl[4]:
     #     if larger_fig:
-            #print(larger_fig)
+    #         print(larger_fig)
 
-    #print(data)
-
-#profit_and_loss_write()
+pnl_write()
