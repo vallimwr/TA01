@@ -1,10 +1,26 @@
-import read_file
+from api import forex
+from pathlib import Path
+import re, csv
 
-list= read_file.overheads()
+def overheads():
+    """
+    empty list made to store overhead values
+    """
+    overheads_list= []
+    path = Path.cwd()/'project_group'/'csv_reports'/'Overheads.csv'
+    with path.open(mode= "r", encoding= "UTF-8") as file:
+        reader= csv.reader(file)
+        next (reader)
+
+        for line in reader:
+            overheads_list.append(line)
+        return overheads_list
+        
+#print(overheads())
 
 def overheads_write():
     all_overheads= []
-    for value in list:
+    for value in overheads():
         all_overheads.append(value[1])
 
     highest_amt= max(all_overheads)
@@ -12,10 +28,7 @@ def overheads_write():
 
     for number, values in enumerate(all_overheads):
         if values== highest_amt:
-            category= list[number][0]
-    return category, highest_amt
-
+            category= overheads()[number][0]
+    return f"[HIGHEST OVERHEADS] {category}: {highest_amt}"
 
 print(overheads_write())
-
-    
