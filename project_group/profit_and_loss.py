@@ -1,4 +1,4 @@
-from api import forex
+#from api import forex
 from pathlib import Path
 import re, csv
 
@@ -19,4 +19,6 @@ def profit_and_loss_write():
     for data in profit_and_loss():
         all_pnl.append(data[5])
 
-    if 
+    print(all_pnl)
+
+        #if number in all_pnl<:

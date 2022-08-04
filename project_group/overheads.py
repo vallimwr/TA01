@@ -16,12 +16,12 @@ def overheads():
             overheads_list.append(line)
         return overheads_list
         
-#print(overheads())
+print(overheads())
 
 def overheads_write():
     all_overheads= []
     for value in overheads():
-        all_overheads.append(value[1])
+        all_overheads.append(float(value[1]))
 
     highest_amt= max(all_overheads)
     
