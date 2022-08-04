@@ -7,7 +7,7 @@ file_path.touch()
 try:
     def overheads():
         """
-        This function reads the values in  the overhead csv
+        This function reads the values in  the overhead csv and appends it to empty list
         """
         #Empty list made to store overhead values
         overheads_list= []
