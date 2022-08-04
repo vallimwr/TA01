@@ -9,8 +9,8 @@ data = r.json()
 
 print(data)
 
-file_path = Path.cwd()/'project group'/'deficit_report.txt'
-file_path.touch
+file_path = Path.cwd()/'project group'/'overall_report.txt'
+file_path.touch()
 
 def api():
     forex = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
