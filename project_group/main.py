@@ -9,5 +9,5 @@ def main_func():
     overheads.overheads_function(forex)
     coh.coh_function(forex)
     profit_and_loss.profitloss_function(forex)
- 
+
 print(main_func())
