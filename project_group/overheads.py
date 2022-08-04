@@ -19,7 +19,7 @@ try:
             #skips the headers in the overheads csv 
             next (reader)
 
-            #appends values in the overheads csv to the overheads_list
+            #appends values without the headers in the overheads csv to the overheads_list
             for line in reader:
                 overheads_list.append(line)
             return overheads_list
@@ -50,7 +50,8 @@ try:
         for number, values in enumerate(all_overheads):
             if values== highest_amt:
                 category= overheads()[number][0]
-        return f"[HIGHEST OVERHEADS] {category}: {highest_amt}"
+                with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
+                    text = file.write(f"[HIGHEST OVERHEADS] {category}: {highest_amt}\n")
             
     print("This is working")
 except Exception as e:
