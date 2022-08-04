@@ -16,9 +16,9 @@ def cash_on_hand():
 print(cash_on_hand())
 
 import cash_on_hand
-list = cash_on_hand()
 
 def cashonhand_write():
     list = []
     for value in list:
-        list.append(value[1])
+        list.append(float(value[1]))
+    print(list)
