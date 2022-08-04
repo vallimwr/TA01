@@ -2,16 +2,24 @@ import requests
 from pathlib import Path
 
 api_key = "1JZVGRKCHDT3KUSQ"
-url = "https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey={api_key}"
+url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
 
 r = requests.get(url)
 data = r.json()
 
-file_path = Path.cwd()/'project group'/'overall_report.txt'
+print(data)
+
+file_path = Path.cwd()/'project group'/'deficit_report.txt'
 file_path.touch
 
-forex = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
-with file_path.open(mode = 'w', encoding = 'utf-8') as file:
-    value = file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD 1 = SGD{forex}")
-    
-print(value)
+def api():
+    forex = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+    with file_path.open(mode = 'w', encoding = 'utf-8') as file:
+        if file_path.exists():
+            value = file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD 1 = SGD{forex}")
+
+        else:
+            print('does not exist')
+        return forex
+
+print(api())
