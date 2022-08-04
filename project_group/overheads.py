@@ -18,17 +18,21 @@ def overheads():
         
 #print(overheads())
 
-def overheads_write():
-    all_overheads= []
-    for value in overheads():
-        all_overheads.append(float(value[1]))
+try:
+    def overheads_write():
+        all_overheads= []
+        for value in overheads():
+            all_overheads.append(float(value[1]))
 
-    highest_amt= max(all_overheads)
-    
+        highest_amt= max(all_overheads)
+        
 
-    for number, values in enumerate(all_overheads):
-        if values== highest_amt:
-            category= overheads()[number][0]
-    return f"[HIGHEST OVERHEADS] {category}: {highest_amt}"
+        for number, values in enumerate(all_overheads):
+            if values== highest_amt:
+                category= overheads()[number][0]
+        return f"[HIGHEST OVERHEADS] {category}: {highest_amt}"
+    print("This is working")
+except Exception as e:
+    print(f"This does not work. Reason: {e}")
 
 print(overheads_write())
