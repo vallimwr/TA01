@@ -7,19 +7,27 @@ def profit_and_loss():
     path = Path.cwd()/'project_group'/'csv_reports'/'profit-and-loss-usd.csv'
     with path.open(mode = "r",encoding="UTF-8-sig",newline="") as file:
         reader = csv.reader(file)
-        
+        next(reader)
+
         for line in reader:
             pnl_list.append(line)
         return pnl_list
         
-profit_and_loss()
+#print(profit_and_loss())
+import profit_and_loss
 
-def profit_and_loss_write(): 
+def pnl_write(): 
     all_pnl= []
-    A= profit_and_loss()
-    for data in A:
-        all_pnl.append(data)
+    #A= profit_and_loss()
+    for value in all_pnl:
+        all_pnl.append(value)
+    print(all_pnl)
 
-    print(data)
+    
+    # for larger_fig in all_pnl[4]:
+    #     if larger_fig:
+            #print(larger_fig)
 
-profit_and_loss_write()
+    #print(data)
+
+#profit_and_loss_write()
