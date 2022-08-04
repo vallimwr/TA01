@@ -1,4 +1,4 @@
-from api import forex
+#from api import forex
 from pathlib import Path
 import re, csv
 
@@ -16,7 +16,7 @@ def overheads():
             overheads_list.append(line)
         return overheads_list
         
-print(overheads())
+#print(overheads())
 
 def overheads_write():
     all_overheads= []
