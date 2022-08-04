@@ -1,4 +1,5 @@
 import requests
+from pathlib import Path
 
 def forex(USD):
     api_key = "1JZVGRKCHDT3KUSQ"
@@ -7,6 +8,5 @@ def forex(USD):
     r = requests.get(url)
     data = r.json()
 
-    exchange_rate = data['Realtime Currency Exchange Rate']['5. Exchange Rate']
-    print(exchange_rate)
+    file_path = Path.cwd()/'project group'/'overall_report.txt'
 
