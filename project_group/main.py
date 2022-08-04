@@ -1,4 +1,4 @@
-import api, overheads, project_group.coh as coh, project_group.profit_and_loss as profit_and_loss 
+import api, overheads, coh, profit_and_loss 
 from pathlib import Path
 
 file_path = Path.cwd()/'project group'/'overall_report.txt'

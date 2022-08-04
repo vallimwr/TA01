@@ -15,7 +15,7 @@ def cash_on_hand():
 
 print(cash_on_hand())
 
-import cash_on_hand
+import coh
 
 def cashonhand_write():
     list = []
