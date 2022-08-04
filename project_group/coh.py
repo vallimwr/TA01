@@ -2,6 +2,9 @@
 from pathlib import Path
 import re, csv
 
+file_path = Path.cwd()/'project_group'/'overall_report.txt'
+file_path.touch()
+
 def cash_on_hand():
     coh_list = []
     path = Path.cwd()/'project_group'/'csv_reports'/'cash-on-hand-usd.csv'
@@ -31,13 +34,15 @@ def cashonhand_write():
     for amount in range(len(all_coh)-1):
         diff = all_coh[amount] - all_coh[amount + 1]
         if diff >0:
-                text = .write(f"[CASH DEFICIT] DAY: {day_list[amount+1]}, AMOUNT: SGD{diff:.2f}")
+            with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
+                text = file.write(f"[CASH DEFICIT] DAY: {day_list[amount+1]}, AMOUNT: SGD{diff:.2f}")
                 count += 1
 
         else:
             print('does not exist')
 
     if count == 0:
+        with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
                 text = file.write(f"[CASH SURPLUS] Cash-on-hand on each period is higher than the previous period")
 
     else:
