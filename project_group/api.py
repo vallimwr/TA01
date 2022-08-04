@@ -15,4 +15,5 @@ def forex():
     with file_path.open(mode = 'w', encoding = 'utf-8') as file:
         value = file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD 1 = SGD{forex}")
     return value
+
 print(forex())
