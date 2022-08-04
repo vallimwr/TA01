@@ -1,4 +1,3 @@
-from api import forex
 from pathlib import Path
 import re, csv
 
