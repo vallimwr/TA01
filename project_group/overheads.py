@@ -4,8 +4,9 @@ import re, csv
 try:
     def overheads():
         """
-        empty list made to store overhead values
+        This function reads the values in  the overhead csv
         """
+        #Empty list made to store overhead values
         overheads_list= []
         path = Path.cwd()/'project_group'/'csv_reports'/'Overheads.csv'
         with path.open(mode= "r", encoding= "UTF-8") as file:
@@ -18,7 +19,8 @@ try:
     print("This is working")
 except Exception as e:
     print(f"This does not work. Reason: {e}")
-        
+
+#check values in overheads()        
 #print(overheads())
 
 try:

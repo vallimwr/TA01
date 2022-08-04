@@ -1,4 +1,4 @@
-from api import forex
+#from api import forex
 from pathlib import Path
 import re, csv
 
@@ -12,18 +12,25 @@ def profit_and_loss():
         for line in reader:
             pnl_list.append(line)
         return pnl_list
-
-#profit_and_loss()       
+   
 #print(profit_and_loss())
 
 def pnl_write(): 
     all_pnl= []
-    #A= profit_and_loss()
+    pnl_days= []
     for value in profit_and_loss():
-        all_pnl.append(value[4])
+        all_pnl.append(float(value[4]))
     print(all_pnl)
 
-    
+    for days in profit_and_loss():
+        pnl_days.append(days[0])
+    print(pnl_days)
+
+    if all_pnl[0]> all_pnl[1]:
+        deficit_amount= all_pnl[0]- all_pnl[1]
+    print(deficit_amount)
+        
+
     # for larger_fig in all_pnl[4]:
     #     if larger_fig:
     #         print(larger_fig)
