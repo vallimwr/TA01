@@ -22,11 +22,3 @@ def cashonhand_write():
     list = []
     for value in list:
         list.append(value[1])
-    return list
-
-    
-
-
-
-
-
