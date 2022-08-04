@@ -10,7 +10,7 @@ r = requests.get(url)
 data = r.json()
 # retrieve data with the function .json from response and save it as data
 
-print(data)
+#print(data)
 
 file_path = Path.cwd()/'project_group'/'overall_report.txt'
 # set file path to overall_report.txt
@@ -27,8 +27,5 @@ def api():
     with file_path.open(mode = 'w', encoding = 'utf-8') as file:
 # write exchange rate in summary_report.txt 
         if file_path.exists():
-            value = file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD 1 = SGD{forex}")
-
-        else:
-            print('does not exist')
+            value = file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD 1 = SGD{forex}\n")
     return forex

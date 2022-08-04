@@ -27,7 +27,7 @@ def profit_and_loss():
 ## Check values in profit and loss
 #print(profit_and_loss())
 
-def pnl_write(): 
+def pnl_write(forex): 
     """
     - This function  returns the days that have deficit and the amount of deficit of the net profit
     - If there are no deficits, the function will return a surplus
@@ -40,15 +40,15 @@ def pnl_write():
     #for loop to append the net profit values in index position 4
     #values are converted to float
     for value in profit_and_loss():
-        all_pnl.append(float(value[4]))
+        all_pnl.append(int(value[4]*int(forex)))
     # to check the values in all_pnl
-    print(all_pnl)
+    #print(all_pnl)
 
     #for loop to append the days in index position 0
     for days in profit_and_loss():
         day_pnl.append(days[0])
     # to check the values in all_pnl
-    print(day_pnl)
+    #print(day_pnl)
     
     count = 0 
     #for loop to 
@@ -62,5 +62,3 @@ def pnl_write():
     if count == 0:
         with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[PROFIT SURPLUS] Profit on each period is higher than the previous period\n")
-
-pnl_write()

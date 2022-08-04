@@ -24,7 +24,7 @@ def cash_on_hand():
 # append data in csv to empty list
         return coh_list
         
-print(cash_on_hand())
+#print(cash_on_hand())
 
 def cashonhand_write(forex):
     '''
@@ -41,13 +41,13 @@ def cashonhand_write(forex):
 # for each value in the csv file
         all_coh.append(float(value[1])*forex)
 # appends amount of cash each day and convert it from USD to SGD to empty list
-    print(all_coh)
+    #print(all_coh)
 
     for days in cash_on_hand():
 # for each day in the csv file
         day_list.append(days[0])
 # append days in csv file to empty list
-    print(day_list)
+    #print(day_list)
 
     count = 0 
 # set a global counter
@@ -61,9 +61,7 @@ def cashonhand_write(forex):
                 text = file.write(f"[CASH DEFICIT] DAY: {day_list[amount+1]}, AMOUNT: SGD{diff:.2f}\n")
 
                 count += 1
-                
+
     if count == 0:
         with file_path.open(mode = 'a', encoding = 'UTF-8') as file:
                 text = file.write(f"[CASH SURPLUS] Cash-on-hand on each period is higher than the previous period\n")
-
-cashonhand_write(1)
