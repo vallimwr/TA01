@@ -1,4 +1,4 @@
-#from api import forex
+from api import forex
 from pathlib import Path
 import re, csv
 
@@ -19,6 +19,6 @@ import coh
 
 def cashonhand_write():
     list = []
+    day = []
     for value in list:
-        list.append(float(value[1]))
-    print(list)
+        list.append(float(value[1])*forex)
