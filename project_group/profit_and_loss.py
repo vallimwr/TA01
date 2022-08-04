@@ -2,6 +2,9 @@
 from pathlib import Path
 import re, csv
 
+file_path = Path.cwd()/'project_group'/'overall_report.txt'
+file_path.touch()
+
 def profit_and_loss():
     pnl_list = []
     path = Path.cwd()/'project_group'/'csv_reports'/'profit-and-loss-usd.csv'

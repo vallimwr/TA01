@@ -1,6 +1,9 @@
 from pathlib import Path
 import re, csv
 
+file_path = Path.cwd()/'project_group'/'overall_report.txt'
+file_path.touch()
+
 try:
     def overheads():
         """
@@ -36,8 +39,11 @@ try:
             if values== highest_amt:
                 category= overheads()[number][0]
         return f"[HIGHEST OVERHEADS] {category}: {highest_amt}"
+        with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
+            text = file.write(f"[HIGHEST OVERHEADS] {category}: {highest_amt}")
+            
     print("This is working")
 except Exception as e:
-    print(f"This does not work. Reason: {e}")
+        print(f"This does not work. Reason: {e}")
 
 print(overheads_write())
