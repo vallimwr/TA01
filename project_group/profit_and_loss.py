@@ -36,9 +36,8 @@ def pnl_write():
             with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
                 text = file.write(f"[CASH DEFICIT] DAY: {day_pnl[amount+1]}, AMOUNT: SGD{diff:.2f}")
                 count += 1
-
         else:
-                print('does not exist')
+            print("what")
 
         if count == 0:
             with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
