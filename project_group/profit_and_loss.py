@@ -13,13 +13,13 @@ def profit_and_loss():
             pnl_list.append(line)
         return pnl_list
         
-#print(profit_and_loss())
+print(profit_and_loss())
 import profit_and_loss
 
 def pnl_write(): 
     all_pnl= []
     #A= profit_and_loss()
-    for value in all_pnl:
+    for value in profit_and_loss():
         all_pnl.append(value)
     print(all_pnl)
 
