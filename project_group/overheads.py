@@ -6,9 +6,10 @@ file_path.touch()
 
 
 try:
-    def overheads(forex):
+    def overheads():
         """
-        This function reads the values in  the overhead csv and appends it to an empty list
+        - This function returns the data in the overheads csv file 
+        - It reads the values in  the overhead csv and appends it to an empty list
         """
         #Empty list made to store overhead values
         overheads_list= []
@@ -32,13 +33,20 @@ except Exception as e:
 
 try:
     def overheads_write():
+        """
+        - This function returns the highest overhead category and amount in the overheads csv
+        - It appends the overhead values in an empty list and finds the highest overhead  
+        """
+        # empty list made to append overhead values 
         all_overheads= []
+        # for loop to append values in the index position of 1
         for value in overheads():
             all_overheads.append(float(value[1]))
-
+        
+        # max() used to find the highest amount
         highest_amt= max(all_overheads)
         
-
+        # used to find the category that the highest amount belongs to
         for number, values in enumerate(all_overheads):
             if values== highest_amt:
                 category= overheads()[number][0]
@@ -46,6 +54,7 @@ try:
             
     print("This is working")
 except Exception as e:
+    #errorhandling to test if the code works
         print(f"This does not work. Reason: {e}")
 
 print(overheads_write())
