@@ -4,26 +4,30 @@ import re, csv
 file_path = Path.cwd()/'project_group'/'overall_report.txt'
 file_path.touch()
 
+
 try:
     def overheads():
         """
-        This function reads the values in  the overhead csv and appends it to empty list
+        This function reads the values in  the overhead csv and appends it to an empty list
         """
         #Empty list made to store overhead values
         overheads_list= []
         path = Path.cwd()/'project_group'/'csv_reports'/'Overheads.csv'
         with path.open(mode= "r", encoding= "UTF-8") as file:
             reader= csv.reader(file)
+            #skips the headers in the overheads csv 
             next (reader)
 
+            #appends values in the overheads csv to the overheads_list
             for line in reader:
                 overheads_list.append(line)
             return overheads_list
     print("This is working")
 except Exception as e:
+    # errorhandling to to test that code works
     print(f"This does not work. Reason: {e}")
 
-#check values in overheads()        
+##check values in overheads()        
 #print(overheads())
 
 try:
