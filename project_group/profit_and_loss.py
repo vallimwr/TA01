@@ -19,4 +19,4 @@ def profit_and_loss_write():
     for data in profit_and_loss():
         all_pnl.append(data)
 
-    print(all_pnl)
+    print(data)
