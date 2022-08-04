@@ -15,8 +15,8 @@ def profit_and_loss():
 #print(profit_and_loss())
 
 def profit_and_loss_write(): 
-    
+    all_pnl= []
+    for data in profit_and_loss():
+        all_pnl.append(data[5])
 
-
-
-
+    if 
