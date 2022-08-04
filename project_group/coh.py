@@ -1,4 +1,3 @@
-#from api import forex
 from pathlib import Path
 import re, csv
 
@@ -15,7 +14,7 @@ def cash_on_hand():
         for line in reader:
             coh_list.append(line)
         return coh_list
-
+        
 print(cash_on_hand())
 
 def cashonhand_write():
@@ -28,7 +27,6 @@ def cashonhand_write():
     for days in cash_on_hand():
         day_list.append(days[0])
     print(day_list)
-#cashonhand_write()
 
     count = 0 
     for amount in range(len(all_coh)-1):
