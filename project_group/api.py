@@ -12,7 +12,7 @@ file_path.touch
 
 def forex():
     forex = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
-    with file_path.open(mode = 'w', encoding = 'utf-8') as file:
+    with file_path.open(mode = 'w', encoding = 'UTF-8') as file:
         value = file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD 1 = SGD{forex}")
     return value
 print(forex())
