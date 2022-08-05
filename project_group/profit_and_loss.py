@@ -51,7 +51,7 @@ def pnl_write(forex):
     #print(day_pnl)
     
     count = 0 
-    #for loop to 
+    #for loop to
     for amount in range(len(all_pnl)-1):
         diff = all_pnl[amount] - all_pnl[amount + 1]
         if diff >0:
